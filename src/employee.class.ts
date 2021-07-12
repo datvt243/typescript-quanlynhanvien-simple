@@ -1,12 +1,12 @@
 class Employee {
     private id: number;
-    public name: String;
+    public name: string;
     public sex: number;
     public year: number;
     public position: string;
     public salary: number;
 
-    constructor (id: number, name: String, sex: number, year: number, position: string, salary: number) {
+    constructor (id: number, name: string, sex: number, year: number, position: string, salary: number) {
         this.id = id;
         this.name = name;
         this.sex = sex;

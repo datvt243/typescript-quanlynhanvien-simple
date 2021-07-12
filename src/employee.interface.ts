@@ -1,10 +1,10 @@
 interface EmployeeInterface {
-    id: Number;
-    name: String;
-    sex: Number;
-    year: Number;
-    position: String;
-    salary: Number;
+    id: number;
+    name: string;
+    sex: number;
+    year: number;
+    position: string;
+    salary: number;
 }
 
 export default EmployeeInterface

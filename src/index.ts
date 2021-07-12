@@ -18,16 +18,16 @@ enum Position {
 }
 
 interface getValue {
-    value: String | Number | any, 
-    messenger: String, 
+    value: string | number | any, 
+    messenger: string, 
     flag: boolean
 }
 
 const addEmployee = () => {
-    let flag:Boolean = true;
-    let errMes:String = '';
+    let flag:boolean = true;
+    let errMes:string = '';
 
-    let id: number = 0, name: String = '', sex: Sex = Sex.male, year: number = 0, position: Position = 1, salary: number = 0;
+    let id: number = 0, name: string = '', sex: Sex = Sex.male, year: number = 0, position: Position = 1, salary: number = 0;
 
     id = getLastId();
     
@@ -97,8 +97,8 @@ const editEmployee = function (this:any) {
                 updateEmp[i].addEventListener('click', function () {
                     
                     let targetEmp = listEmployee.list[target];
-                    let flag:Boolean = true;
-                    let errMes:String = '';
+                    let flag:boolean = true;
+                    let errMes:string = '';
 
                     try {
                         let getName: getValue = getValue(targetEmp.name, 'edit-name');
@@ -235,7 +235,7 @@ const addToTable = (empList:EmployeeList):void => {
 
 }
 
-const getValue = (val: String | Number, elm: string): getValue => {
+const getValue = (val: string | number, elm: string): getValue => {
     
     let Obj: getValue = { value: null, messenger: '', flag: true};
     let title:string = (<HTMLInputElement>document.getElementById(elm)).getAttribute('data-name') ? <string>(<HTMLInputElement>document.getElementById(elm)).getAttribute('data-name') : elm;
