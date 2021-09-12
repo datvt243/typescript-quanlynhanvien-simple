@@ -1,6 +1,6 @@
 import EmployeeList from './employee-list';
 import Employee from './employee.class';
-import EmployeeInterface from './employee.interface';
+// import EmployeeInterface from './employee.interface';
 
 import "./sass/styles.sass";
 
@@ -57,7 +57,6 @@ const addEmployee = () => {
         const employee = new Employee(id, name, sex, year, Position[position], salary);
         listEmployee.addEmployee(employee);
         addToTable(listEmployee);
-        
         clearInputElement();
     } else {
         alert("Có gì đó sai sai !! \n" + errMes)
@@ -346,10 +345,6 @@ const removeModal = (modal:HTMLElement):void => {
     modal.style.display = 'none';
 }
 
-// const getLengthEmpList = ():string => {
-//     return listEmployee.lengthEmployee() + '';
-// }
-
 const clearInputElement = ():void => {
     try {
         let inputElm:string[] = ['name', 'year', 'salary'];
@@ -370,4 +365,3 @@ window.onload = function () {
         });
     }
 }
-
